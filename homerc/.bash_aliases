@@ -45,3 +45,13 @@ alias ip4='ip -o -4 addr show | awk "{print NR\": \"\$2\": \"\$4}"'
 alias ipa='ip -o -4 addr show | awk "{print NR\": \"\$2\": \"\$4}"'
 
 alias tmuxatt='tmux attach -t'
+
+# wsl cd fix
+
+cd() {
+    if [ $# -eq 1 ] && echo "$1" | grep -qE '^[a-zA-Z]:[/\\]'; then
+        builtin cd "$(wslpath "$1")"
+    else
+        builtin cd "$@"
+    fi
+}
