@@ -53,10 +53,7 @@
       "spaceBeforeUnit": "default"
     },
     "percent": {
-      "type": [
-        "num",
-        "num-color"
-      ],
+      "type": 7,
       "ndigits": 0,
       "color": {
         "green": "32",
@@ -82,7 +79,7 @@
         "total": "97",
         "border": "97"
       },
-      "width": 10
+      "width": 15
     },
     "fraction": {
       "ndigits": 2,
@@ -141,16 +138,16 @@
       "keyIcon": ""
     },
     {
+      "type": "terminal",
+      "keyIcon": ""
+    },
+    {
       "type": "display",
       "keyIcon": "󰍹",
       "compactType": "none",
       "format": " {width}x{height} @ {refresh-rate} Hz",
       "preciseRefreshRate": false,
       "order": null
-    },
-    {
-      "type": "terminal",
-      "keyIcon": ""
     },
     {
       "type": "cpu",
@@ -172,6 +169,17 @@
         "type": 0
       }
     },
+    "break",
+    {
+      "type": "cpuusage",
+      "keyIcon": "",
+      "percent": {
+        "green": 50,
+        "yellow": 80,
+        "type": 0
+      },
+      "format": " {avg-bar} ({avg})"
+    },
     {
       "type": "memory",
       "keyIcon": "",
@@ -179,17 +187,8 @@
         "green": 50,
         "yellow": 80,
         "type": 0
-      }
-    },
-    {
-      "type": "swap",
-      "percent": {
-        "green": 50,
-        "yellow": 80,
-        "type": 0
       },
-      "keyIcon": "󰓡",
-      "separate": false
+      "format": "    {percentage-bar} ({percentage})"
     },
     {
       "type": "disk",
@@ -223,10 +222,6 @@
     {
       "type": "poweradapter",
       "keyIcon": "󰚥"
-    },
-    {
-      "type": "locale",
-      "keyIcon": ""
     },
     "break",
     {
