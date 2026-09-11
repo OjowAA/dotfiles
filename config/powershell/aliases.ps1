@@ -1,7 +1,3 @@
-if (Get-Command fastfetch -ErrorAction Ignore) {
-    fastfetch
-}
-
 function Grep-Object {
     param(
         [Parameter(Position=0)]
